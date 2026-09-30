@@ -192,5 +192,37 @@ amp-challenge-2027/
 
 ## References
 
-[DBAASP, GRAMPA, DRAMP, MarlysAMP, CD-HIT, classifier-free guidance, Tobit model, gradient-boosted trees library, and any others.]
+Pirtskhalava, M., Amiranashvili, S., Grigolava, M., Chubinidze, M., Vishnepolsky, B., Gabrielian, A., Rosenthal, A., & Tartakovsky, M. (2021). DBAASP v3: Database of antimicrobial/cytotoxic activity and structure of peptides as a resource for development of new therapeutics. Nucleic Acids Research, 49(D1), D288–D297. https://doi.org/10.1093/nar/gkaa991
 
+
+Witten, J., & Witten, Z. (2019). Deep learning regression model for antimicrobial peptide design. bioRxiv. https://doi.org/10.1101/692681
+
+
+“The Giant Repository of AMP Activities (GRAMPA) dataset was obtained from Witten and Witten.” (Witten & Witten, 2019)
+
+
+Ma, T., Liu, Y., Yu, B., Sun, X., Yao, H., Hao, C., Li, J., Nawaz, M., Jiang, X., Lao, X., & Zheng, H. (2025). DRAMP 4.0: An open-access data repository dedicated to the clinical translation of antimicrobial peptides. Nucleic Acids Research, 53(D1), D403–D410.   
+
+
+Marczak, B., Jaromin, M., Bocian, A., & Łyskowski, A. (2026). MarLys AMP: An Integrated Bioinformatics Platform for Antimicrobial Peptide Analysis Using diamond and Biopython Tools with Optimized Database Repeatability Indices DAIRI & IDAIRI. SSRN. https://doi.org/10.2139/ssrn.6418316
+
+
+Marczak, B., Bocian, A., & Łyskowski, A. (2026). MarLys AMP database – MLAMP_db (Version 3). Mendeley Data. https://doi.org/10.17632/w4hb5grjwb.3.  
+
+
+Li, W., & Godzik, A. (2006). Cd-hit: A fast program for clustering and comparing large sets of protein or nucleotide sequences. Bioinformatics, 22(13), 1658–1659. https://doi.org/10.1093/bioinformatics/btl158
+
+
+Ho, J., & Salimans, T. (2022). Classifier-free diffusion guidance. arXiv preprint arXiv:2207.12598. https://doi.org/10.48550/arXiv.2207.12598
+
+
+Tobin, J. (1958). Estimation of relationships for limited dependent variables. Econometrica, 26(1), 24–36. https://doi.org/10.2307/1907382
+
+
+Amemiya, T. (1984). Tobit models: A survey. Journal of Econometrics, 24(1–2), 3–61. https://doi.org/10.1016/0304-4076(84)90074-5
+
+
+Chen, T., & Guestrin, C. (2016). XGBoost: A scalable tree boosting system. In Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD '16) (pp. 785–794). ACM. https://doi.org/10.1145/2939672.2939785.
+
+
+Soares, D., Hetzel, L., Szymczak, P., Der Torossian Torres, M., Sommer, J., de la Fuente-Nunez, C., Theis, F. J., Günnemann, S., & Szczurek, E. (2026). OmegAMP: Targeted AMP discovery via biologically informed generation. https://doi.org/10.48550/arXiv.2504.17247
