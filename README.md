@@ -2,18 +2,26 @@
 
 **Submission to AMP Challenge 2027 | Hazra Group**
 
-*Siddhant Poudyal†¹, Gautam Ahuja†², Chetana Baliga³, Aurosikha Das³, Saugata Hazra‡¹, Rik Ganguly‡³**
+*Siddhant Poudyal $^{1\dagger}$, Gautam Ahuja $^{2\dagger}$, Chetana Baliga $^{3}$, Aurosikha Das $^{3}$, Saugata Hazra $^{1\ddagger}$, Rik Ganguly $^{3\ddagger}$*
 
-† Equal contribution (co-first authors)
-‡ Corresponding authors (co-corresponding authors)
 
-**Affiliations**
+**Affiliation:**
 
-¹ Department of Biosciences and Bioengineering, Indian Institute of Technology Roorkee, Roorkee, Uttarakhand, India<br/>
-² Ashoka University, Sonipat, Haryana, India<br/>
-³ Department of Biotechnology, Faculty of Natural Sciences, Ramaiah University of Applied Sciences, Gnanagangothri Campus, New BEL Road, MSR Nagar, Bengaluru–560054, Karnataka, India<br/>
+$^{1}$ Department of Biosciences and Bioengineering, Indian Institute of Technology Roorkee, India<br/>
+$^{2}$ Koita Centre for Digital Health at Ashoka, Ashoka University, India<br/>
+$^{3}$ Department of Biotechnology, Faculty of Natural Sciences, Ramaiah University of Applied Sciences, India<br/>
+$^{\dagger}$ Equal contribution (co-first authors)
+$^{\ddagger}$ Corresponding authors (co-corresponding authors: saugata.hazra@bt.iitr.ac.in ;  rikganguly.bt.fns@msruas.ac.in)
 
-Code: [PUBLIC REPO URL](https://github.com/siddhantp2807/amp-challenge-2027) | License: BSD-3 | Contact: siddhantp457@gmail.com | Team name: Hazra Group
+
+**ORCID:**
+
+Gautam Ahuja [0009-0004-3445-9300](https://orcid.org/0009-0004-3445-9300)<br/>
+Saugata Hazra [0000-0002-3074-1534](https://orcid.org/0000-0002-3074-1534)<br/>
+Rik Ganguly [0000-0003-1693-111X](https://orcid.org/0000-0003-1693-111X)
+
+Code: [https://github.com/siddhantp2807/amp-challenge-2027](https://github.com/siddhantp2807/amp-challenge-2027) | License: BSD-3 | Team name: Hazra Group
+
 
 ---
 
@@ -99,7 +107,7 @@ We sweep eight charge targets from $+3$ to $+10$, drawing $20,000$ candidates at
 The ranker is trained on the MIC data described in Section 2 and combines two model families by rank averaging:
 
 - **Per-species gradient-boosted trees.** These rank best in our tests but can only use the $4,742$ exact measurements.
-- **Multi-head Tobit network.** This is the only member that learns from the $1,749$ censored measurements. A value such as "$>128 µM$" means the peptide was inactive at the tested range, not that the value is missing, and a Tobit likelihood treats it that way.
+- **Multi-head Tobit network.** This is the only member that learns from the $1,749$ censored measurements. A value such as "$>128 \mu M$" means the peptide was inactive at the tested range, not that the value is missing, and a Tobit likelihood treats it that way.
 
 Final scores use the ensemble's lower confidence bound minus a penalty for uneven performance across species, so we favor peptides that look good on average *and* are not carried by a single species.
 
@@ -120,15 +128,15 @@ Final scores use the ensemble's lower confidence bound minus a penalty for uneve
 
 **Per-species Spearman, cross-validation**
 
-| species | exact cells | trees | Tobit | rank average |
-|---|---|---|---|---|
-| *E. coli* | 1,492 | 0.572 $\pm$ 0.032 | 0.558 $\pm$ 0.028 | **0.597 ± 0.029** |
-| *S. aureus* | 1,107 | 0.459 $\pm$ 0.031 | 0.403 $\pm$ 0.031 | **0.484 ± 0.030** |
-| *P. aeruginosa* | 855 | **0.494 $\pm$ 0.038** | 0.383 $\pm$ 0.093 | 0.476 ± 0.065 |
-| *K. pneumoniae* | 390 | 0.548 $\pm$ 0.045 | 0.566 $\pm$ 0.044 | **0.596 ± 0.042** |
-| *A. baumannii* | 326 | 0.510 $\pm$ 0.054 | 0.556 $\pm$ 0.048 | **0.587 ± 0.047** |
-| *E. faecalis* | 241 | 0.344 $\pm$ 0.071 | 0.356 $\pm$ 0.078 | **0.387 ± 0.073** |
-| **weighted mean** | 5,882 | 0.509 | 0.475 | **0.533** |
+| species | exact cells | weight | trees | Tobit | rank average |
+|---|---|---|---|---|---|
+| *E. coli* | 1,492 | 0.34 | 0.572 $\pm$ 0.032 | 0.558 $\pm$ 0.028 | **0.597 $\pm$ 0.029** |
+| *S. aureus* | 1,107 | 0.25 | 0.459 $\pm$ 0.031 | 0.403 $\pm$ 0.031 | **0.484 $\pm$ 0.030** |
+| *P. aeruginosa* | 855 | 0.19 | **0.494 $\pm$ 0.038** | 0.383 $\pm$ 0.093 | 0.476 $\pm$ 0.065 |
+| *K. pneumoniae* | 390 | 0.09 | 0.548 $\pm$ 0.045 | 0.566 $\pm$ 0.044 | **0.596 $\pm$ 0.042** |
+| *A. baumannii* | 326 | 0.07 | 0.510 $\pm$ 0.054 | 0.556 $\pm$ 0.048 | **0.587 $\pm$ 0.047** |
+| *E. faecalis* | 241 | 0.05 | 0.344 $\pm$ 0.071 | 0.356 $\pm$ 0.078 | **0.387 $\pm$ 0.073** |
+| **weighted mean** | 4,411 | - | 0.509 $\pm$ 0.037 | 0.475 $\pm$ 0.047 | **0.533 $\pm$ 0.041** |
 
 **Generator.** See Sections 3.1 and 3.2 for reconstruction, latent probing, conditioning error and memorization checks.
 
@@ -189,6 +197,13 @@ amp-challenge-2027/
 ```
 
 ---
+
+## Disclaimer
+
+The authors acknowledge the use of AI for text polishing and code generation. The authors retain full responsibility for the scientific content and integrity of the work.
+
+---
+
 
 ## References
 
