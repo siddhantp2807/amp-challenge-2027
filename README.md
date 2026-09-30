@@ -2,7 +2,7 @@
 
 **Submission to AMP Challenge 2027 | Hazra Group**
 
-*Siddhant Poudyal $^{1\dagger}$, Gautam Ahuja $^{2\dagger}$, Chetana Baliga $^{3}$, Aurosikha Das $^{3}$, Saugata Hazra $^{1\ddagger}$, Rik Ganguly $^{3\ddagger}$*
+Siddhant Poudyal $^{1\dagger}$, Gautam Ahuja $^{2\dagger}$, Chetana Baliga $^{3}$, Aurosikha Das $^{3}$, Saugata Hazra $^{1\ddagger}$, Rik Ganguly $^{3\ddagger}$
 
 
 **Affiliation:**
