@@ -1,0 +1,29 @@
+# Phase A: the deduplicated union of the broad corpus and target-train (30,938
+# latents = 7,609 + 28,091 - 4,762 overlap). Validation is target-val throughout
+# -- never a corpus-internal split, since target-val is the distribution stage 2
+# is actually judged against and is verified leakage-free (0 of 423 appear in the
+# pretraining corpus).
+
+vae_checkpoint: checkpoints/release/finetune_fb3p0_lip0p1_v1_best.pt
+phase: union
+
+lr: 3.0e-4
+weight_decay: 0.01
+betas: [0.9, 0.999]
+warmup_frac: 0.05
+batch_size: 256
+max_epochs: 400
+patience_epochs: 30
+
+ema_decay: 0.999
+resample_z: true          # draw z ~ q(z|x) each epoch (the VAE's own augmentation)
+jitter_sigma: 0.0         # extra noise in normalized latent units. Preflight G6 measured
+                          # the posterior-width ratio at 0.116 (<0.15), so resampling alone
+                          # is near-cosmetic here -- sweep {0, 0.05, 0.1}.
+grad_clip: 1.0
+
+log_every: 50
+eval_every_epochs: 1
+
+checkpoint_dir: checkpoints
+run_name: diffusion_union_v1

@@ -1,0 +1,22 @@
+# Stage-2 denoiser.
+
+d_z: 64              # must match the VAE checkpoint's d_z
+d_model: 256
+n_blocks: 6
+ffn_mult: 2
+dropout: 0.1
+d_cond: 256
+n_fourier: 16        # random Fourier features per continuous property
+
+min_len: 8
+max_len: 50
+
+# Diffusion process
+timesteps: 1000
+schedule_s: 0.008    # cosine schedule offset (Nichol & Dhariwal)
+parameterization: x0 # x0 | eps | v -- x0 matches the paper's stated loss, and
+                     # eps-prediction degenerates at high t on a near-Gaussian
+                     # 64-d target, which is exactly where conditioning decides
+                     # the outcome
+self_cond: false     # ablation; doubles step cost, gains are documented for
+                     # high-dimensional many-step models, not this regime

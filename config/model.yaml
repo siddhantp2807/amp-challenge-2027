@@ -1,0 +1,23 @@
+# encoder sizing (not diagnosed as the reconstruction bottleneck -- unchanged)
+d_model: 192
+nhead: 6
+dim_feedforward: 768
+encoder_layers: 4
+
+# decoder sizing -- decoupled from the encoder's (no cross-attention ties them
+# together), increased to give the non-AR decoder more capacity to unpack a
+# precise joint sequence from one broadcast z vector
+decoder_d_model: 320
+decoder_nhead: 8
+decoder_dim_feedforward: 1280
+decoder_layers: 4
+
+# length head: MLP classifier over the 50 possible lengths (cross-entropy). The old
+# single-linear regression head ("regression", used by v1-v3) got the exact length
+# right only ~8% of the time, which alone caps exact-match rate near that.
+length_head: classifier
+length_hidden: 256
+
+dropout: 0.1
+d_z: 64            # single run for now; override via CLI for a future sweep
+max_len: 52         # 50 AA + BOS + EOS

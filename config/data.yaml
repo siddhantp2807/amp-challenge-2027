@@ -1,0 +1,14 @@
+pretrain_raw: data/processed-data/cluster_and_segregate/segregate/pretrain_segregated.csv
+finetune_raw: data/processed-data/cluster_and_segregate/segregate/finetune_segregated.csv
+
+pretrain_clean: data/processed/pretrain_clean.csv
+finetune_clean: data/processed/finetune_clean.csv
+
+min_length: 8
+max_length: 50
+canonical_regex: "^[ACDEFGHIKLMNPQRSTVWY]+$"
+
+# bucket edges over raw AA length (before BOS/EOS), upper-inclusive
+length_buckets: [16, 24, 35, 50]
+
+pretrain_dev_holdout_frac: 0.02  # phase-1 monitoring only, never used for §5 decisions

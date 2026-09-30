@@ -1,0 +1,20 @@
+lr: 0.0003
+weight_decay: 0.01
+betas:
+- 0.9
+- 0.98
+warmup_frac: 0.05
+batch_size: 128
+max_epochs: 16
+patience_epochs: 100
+beta_target: 1.0
+kl_anneal_frac: 0.3
+free_bits: 3.0
+lipschitz_weight: 0.0
+lipschitz_sigma_frac: 0.1
+lipschitz_start_frac: 0.3
+length_weight: 0.3
+log_every: 50
+eval_every: 500
+checkpoint_dir: checkpoints
+run_name: exp_dz64_fb3p0_lip0

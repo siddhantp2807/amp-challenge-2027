@@ -1,0 +1,28 @@
+lr: 5.0e-5
+weight_decay: 0.01
+betas: [0.9, 0.98]
+warmup_frac: 0.05
+batch_size: 64
+max_epochs: 200
+patience_epochs: 15          # early stop, OR condition (recon plateau OR smoothness proxy degrading)
+smoothness_patience_epochs: 15
+
+beta_target: 1.0
+beta_start_frac: 0.5         # KL re-warm, not re-anneal from 0
+kl_rewarm_frac: 0.20         # fraction of finetune steps to ramp beta back to beta_target
+free_bits: 3.0
+
+lipschitz_weight: 0.0
+lipschitz_sigma_frac: 0.1
+lipschitz_start_frac: 0.0    # already past annealing by phase 2, active from the start
+
+length_weight: 0.3           # cross-entropy on the length classifier head (starts near ln(50)=3.9)
+
+log_every: 20
+eval_every: 100
+smoothness_eval_every: 300   # interpolation-walk proxy is more expensive, run less often
+smoothness_n_pairs: 20       # lightweight subset for the training-time early-stop proxy
+
+checkpoint_dir: checkpoints
+init_from: checkpoints/exp_dz64_fb3p0_lip0_final.pt
+run_name: finetune_fb3p0_v1

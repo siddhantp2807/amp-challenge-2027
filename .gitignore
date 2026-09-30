@@ -6,5 +6,48 @@ dist/
 wheels/
 *.egg-info
 
-# Virtual environments
+# virtual environment
 .venv
+
+# training artifacts
+checkpoints/*.pt
+runs/
+reports/
+logs/
+scripts/*.sh
+
+# not required
+checkpoint/
+
+# processed data
+data/processed/
+data/ld-processed/
+data/generation/
+data/raw-data/*
+!data/raw-data/dramp.zip
+!data/raw-data/dbaasp/
+data/raw-data/dbaasp/*
+!data/raw-data/dbaasp/list_pages.zip
+!data/raw-data/dbaasp/details.zip
+
+# generated output
+generate/
+
+# sampled output
+generated/
+
+# intermediate metadata
+*.md
+!README.md
+!docs/USAGE.md
+!docs/DATA.md
+*.drawio
+
+# jupyter notebooks
+notebooks/
+
+# remove experimental configs
+config/experiments/*
+!config/experiments/exp_dz64_fb3p0_lip0.yaml
+!config/experiments/exp_dz64_fb3p0_lip0_model.yaml
+!config/experiments/finetune_fb3p0_lip0p1_v1.yaml

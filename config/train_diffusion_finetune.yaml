@@ -1,0 +1,25 @@
+# Phase B: target-train only (7,609 latents), continuing from phase A's best.
+# Lower LR, mirroring config/train_finetune.yaml's relationship to pretrain.
+
+vae_checkpoint: checkpoints/release/finetune_fb3p0_lip0p1_v1_best.pt
+phase: train
+init_from: checkpoints/diffusion_union_v1_best.pt
+
+lr: 3.0e-5
+weight_decay: 0.01
+betas: [0.9, 0.999]
+warmup_frac: 0.05
+batch_size: 128
+max_epochs: 300
+patience_epochs: 30
+
+ema_decay: 0.999
+resample_z: true
+jitter_sigma: 0.0
+grad_clip: 1.0
+
+log_every: 50
+eval_every_epochs: 1
+
+checkpoint_dir: checkpoints
+run_name: diffusion_target_v1

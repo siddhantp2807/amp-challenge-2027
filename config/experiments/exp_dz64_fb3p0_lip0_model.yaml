@@ -1,0 +1,13 @@
+d_model: 192
+nhead: 6
+dim_feedforward: 768
+encoder_layers: 4
+decoder_d_model: 320
+decoder_nhead: 8
+decoder_dim_feedforward: 1280
+decoder_layers: 4
+length_head: classifier
+length_hidden: 256
+dropout: 0.1
+d_z: 64
+max_len: 52

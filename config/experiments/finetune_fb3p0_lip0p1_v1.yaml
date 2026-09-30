@@ -1,0 +1,27 @@
+lr: 5.0e-05
+weight_decay: 0.01
+betas:
+- 0.9
+- 0.98
+warmup_frac: 0.05
+batch_size: 64
+max_epochs: 200
+patience_epochs: 15
+smoothness_patience_epochs: 15
+beta_target: 1.0
+beta_start_frac: 0.5
+kl_rewarm_frac: 0.2
+free_bits: 3.0
+lipschitz_weight: 0.1
+lipschitz_sigma_frac: 0.1
+lipschitz_start_frac: 0.0
+length_weight: 0.3
+log_every: 20
+eval_every: 100
+smoothness_eval_every: 300
+smoothness_n_pairs: 20
+checkpoint_dir: checkpoints
+init_from: checkpoints/exp_dz64_fb3p0_lip0_final.pt
+run_name: finetune_fb3p0_lip0p1_v1
+lipschitz_mode: normalized
+lipschitz_ramp_frac: 0.1
