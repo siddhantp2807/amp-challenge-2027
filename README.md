@@ -2,9 +2,16 @@
 
 **Submission to AMP Challenge 2027 | Hazra Group**
 
-Siddhant Poudyal\*, Gautam Ahuja\*, Chetana Baliga\*, Aurosikha Das\*, Saugata Hazra\*, Rik Ganguly\* 
+*Siddhant Poudyal†¹, Gautam Ahuja†², Chetana Baliga³, Aurosikha Das³, Saugata Hazra‡¹, Rik Ganguly‡³**
 
-\* Affiliations: [TO BE ADDED]
+† Equal contribution (co-first authors)
+‡ Corresponding authors (co-corresponding authors)
+
+**Affiliations**
+
+¹ Department of Biosciences and Bioengineering, Indian Institute of Technology Roorkee, Roorkee, Uttarakhand, India<br/>
+² Ashoka University, Sonipat, Haryana, India<br/>
+³ Department of Biotechnology, Faculty of Natural Sciences, Ramaiah University of Applied Sciences, Gnanagangothri Campus, New BEL Road, MSR Nagar, Bengaluru–560054, Karnataka, India<br/>
 
 Code: [PUBLIC REPO URL](https://github.com/siddhantp2807/amp-challenge-2027) | License: BSD-3 | Contact: siddhantp457@gmail.com | Team name: Hazra Group
 
